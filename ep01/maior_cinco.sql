@@ -1,9 +1,6 @@
-SELECT product_id,
-       product_category_name,
-       product_photos_qty
-       
+SELECT *,
+        product_length_cm *	product_height_cm *	product_width_cm / 1000 as product_volume
 
 from tb_products
 
-where product_photos_qty > 5
-       
+       where  product_length_cm *	product_height_cm *	product_width_cm / 1000 > 5
